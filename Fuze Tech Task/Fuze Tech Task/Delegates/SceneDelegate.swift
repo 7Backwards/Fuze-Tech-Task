@@ -18,15 +18,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
+        let navigationController = UINavigationController()
+        let constants = Constants()
+
+        let session = Session(
+            constants: constants,
+            requestManager: RequestManager()
+        )
+
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        if #available(iOS 13.0, *) {
-            window?.overrideUserInterfaceStyle = .light
-        }
-
-        window?.rootViewController = ViewController()
+        window?.rootViewController = navigationController
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
+
+        MainCoordinator(
+            navigationController: navigationController,
+            session: session
+        ).start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

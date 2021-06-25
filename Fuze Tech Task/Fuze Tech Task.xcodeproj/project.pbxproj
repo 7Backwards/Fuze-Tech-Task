@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		B05B0F2426862DE900CEB199 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F2326862DE900CEB199 /* AppDelegate.swift */; };
 		B05B0F2626862DE900CEB199 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F2526862DE900CEB199 /* SceneDelegate.swift */; };
-		B05B0F2826862DE900CEB199 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F2726862DE900CEB199 /* ViewController.swift */; };
+		B05B0F2826862DE900CEB199 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F2726862DE900CEB199 /* HomeViewController.swift */; };
 		B05B0F2E26862DE900CEB199 /* Fuze_Tech_Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F2C26862DE900CEB199 /* Fuze_Tech_Task.xcdatamodeld */; };
 		B05B0F3026862DEC00CEB199 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B05B0F2F26862DEC00CEB199 /* Assets.xcassets */; };
 		B05B0F3326862DEC00CEB199 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05B0F3126862DEC00CEB199 /* LaunchScreen.storyboard */; };
 		B05B0F3E26862DEC00CEB199 /* Fuze_Tech_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F3D26862DEC00CEB199 /* Fuze_Tech_TaskTests.swift */; };
 		B05B0F4926862DED00CEB199 /* Fuze_Tech_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F4826862DED00CEB199 /* Fuze_Tech_TaskUITests.swift */; };
+		B05B0F892686318300CEB199 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F882686318300CEB199 /* CoordinatorProtocol.swift */; };
+		B05B0F8E268631C400CEB199 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F8D268631C400CEB199 /* MainCoordinator.swift */; };
+		B05B0F962686320100CEB199 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F952686320100CEB199 /* Session.swift */; };
+		B05B0F9B2686322700CEB199 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F9A2686322700CEB199 /* Constants.swift */; };
+		B05B0FA0268632D500CEB199 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F9F268632D500CEB199 /* RequestManager.swift */; };
+		B05B0FA8268633BD00CEB199 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FA7268633BD00CEB199 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,7 @@
 		B05B0F2026862DE900CEB199 /* Fuze Tech Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fuze Tech Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05B0F2326862DE900CEB199 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B05B0F2526862DE900CEB199 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B05B0F2726862DE900CEB199 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B05B0F2726862DE900CEB199 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B05B0F2D26862DE900CEB199 /* Fuze_Tech_Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fuze_Tech_Task.xcdatamodel; sourceTree = "<group>"; };
 		B05B0F2F26862DEC00CEB199 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B05B0F3226862DEC00CEB199 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		B05B0F4426862DED00CEB199 /* Fuze Tech TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fuze Tech TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05B0F4826862DED00CEB199 /* Fuze_Tech_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuze_Tech_TaskUITests.swift; sourceTree = "<group>"; };
 		B05B0F4A26862DED00CEB199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B05B0F882686318300CEB199 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		B05B0F8D268631C400CEB199 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B05B0F952686320100CEB199 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		B05B0F9A2686322700CEB199 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B05B0F9F268632D500CEB199 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		B05B0FA7268633BD00CEB199 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +123,8 @@
 				B05B0F7F2686302D00CEB199 /* Utils */,
 				B05B0F802686303500CEB199 /* ViewControllers */,
 				B05B0F812686304300CEB199 /* ViewModels */,
+				B05B0F952686320100CEB199 /* Session.swift */,
+				B05B0F9F268632D500CEB199 /* RequestManager.swift */,
 			);
 			path = "Fuze Tech Task";
 			sourceTree = "<group>";
@@ -144,6 +158,8 @@
 		B05B0F7C26862FD700CEB199 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				B05B0F872686317A00CEB199 /* Base */,
+				B05B0F8D268631C400CEB199 /* MainCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -165,6 +181,7 @@
 		B05B0F7F2686302D00CEB199 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B05B0F9A2686322700CEB199 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -172,7 +189,7 @@
 		B05B0F802686303500CEB199 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B05B0F2726862DE900CEB199 /* ViewController.swift */,
+				B05B0F2726862DE900CEB199 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -180,6 +197,7 @@
 		B05B0F812686304300CEB199 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B05B0FA7268633BD00CEB199 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -198,6 +216,14 @@
 				B05B0F2526862DE900CEB199 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		B05B0F872686317A00CEB199 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B05B0F882686318300CEB199 /* CoordinatorProtocol.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,10 +355,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B05B0F2826862DE900CEB199 /* ViewController.swift in Sources */,
+				B05B0F962686320100CEB199 /* Session.swift in Sources */,
+				B05B0F2826862DE900CEB199 /* HomeViewController.swift in Sources */,
+				B05B0F8E268631C400CEB199 /* MainCoordinator.swift in Sources */,
+				B05B0FA8268633BD00CEB199 /* HomeViewModel.swift in Sources */,
 				B05B0F2426862DE900CEB199 /* AppDelegate.swift in Sources */,
+				B05B0F892686318300CEB199 /* CoordinatorProtocol.swift in Sources */,
 				B05B0F2E26862DE900CEB199 /* Fuze_Tech_Task.xcdatamodeld in Sources */,
+				B05B0FA0268632D500CEB199 /* RequestManager.swift in Sources */,
 				B05B0F2626862DE900CEB199 /* SceneDelegate.swift in Sources */,
+				B05B0F9B2686322700CEB199 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
