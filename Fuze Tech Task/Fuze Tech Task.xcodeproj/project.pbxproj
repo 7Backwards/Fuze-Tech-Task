@@ -99,13 +99,18 @@
 		B05B0F2226862DE900CEB199 /* Fuze Tech Task */ = {
 			isa = PBXGroup;
 			children = (
-				B05B0F2326862DE900CEB199 /* AppDelegate.swift */,
-				B05B0F2526862DE900CEB199 /* SceneDelegate.swift */,
-				B05B0F2726862DE900CEB199 /* ViewController.swift */,
+				B05B0F832686307200CEB199 /* Delegates */,
 				B05B0F2F26862DEC00CEB199 /* Assets.xcassets */,
-				B05B0F3126862DEC00CEB199 /* LaunchScreen.storyboard */,
-				B05B0F3426862DEC00CEB199 /* Info.plist */,
+				B05B0F7C26862FD700CEB199 /* Coordinators */,
+				B05B0F7E2686302400CEB199 /* CoreData */,
+				B05B0F822686304C00CEB199 /* Extensions */,
 				B05B0F2C26862DE900CEB199 /* Fuze_Tech_Task.xcdatamodeld */,
+				B05B0F3426862DEC00CEB199 /* Info.plist */,
+				B05B0F7D2686300400CEB199 /* MockedData */,
+				B05B0F7B26862FC200CEB199 /* Storyboards */,
+				B05B0F7F2686302D00CEB199 /* Utils */,
+				B05B0F802686303500CEB199 /* ViewControllers */,
+				B05B0F812686304300CEB199 /* ViewModels */,
 			);
 			path = "Fuze Tech Task";
 			sourceTree = "<group>";
@@ -126,6 +131,73 @@
 				B05B0F4A26862DED00CEB199 /* Info.plist */,
 			);
 			path = "Fuze Tech TaskUITests";
+			sourceTree = "<group>";
+		};
+		B05B0F7B26862FC200CEB199 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B05B0F3126862DEC00CEB199 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B05B0F7C26862FD700CEB199 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		B05B0F7D2686300400CEB199 /* MockedData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MockedData;
+			sourceTree = "<group>";
+		};
+		B05B0F7E2686302400CEB199 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B05B0F7F2686302D00CEB199 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B05B0F802686303500CEB199 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B05B0F2726862DE900CEB199 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B05B0F812686304300CEB199 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B05B0F822686304C00CEB199 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B05B0F832686307200CEB199 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				B05B0F2326862DE900CEB199 /* AppDelegate.swift */,
+				B05B0F2526862DE900CEB199 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
