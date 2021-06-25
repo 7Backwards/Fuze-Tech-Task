@@ -21,6 +21,9 @@
 		B05B0F9B2686322700CEB199 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F9A2686322700CEB199 /* Constants.swift */; };
 		B05B0FA0268632D500CEB199 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F9F268632D500CEB199 /* RequestManager.swift */; };
 		B05B0FA8268633BD00CEB199 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FA7268633BD00CEB199 /* HomeViewModel.swift */; };
+		B05B0FB126863BA500CEB199 /* Tweet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FAF26863BA500CEB199 /* Tweet+CoreDataClass.swift */; };
+		B05B0FB226863BA500CEB199 /* Tweet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FB026863BA500CEB199 /* Tweet+CoreDataProperties.swift */; };
+		B05B0FB826863BDF00CEB199 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FB726863BDF00CEB199 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		B05B0F9A2686322700CEB199 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B05B0F9F268632D500CEB199 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		B05B0FA7268633BD00CEB199 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B05B0FAF26863BA500CEB199 /* Tweet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B05B0FB026863BA500CEB199 /* Tweet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B05B0FB726863BDF00CEB199 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +119,9 @@
 			children = (
 				B05B0F832686307200CEB199 /* Delegates */,
 				B05B0F2F26862DEC00CEB199 /* Assets.xcassets */,
-				B05B0F7C26862FD700CEB199 /* Coordinators */,
 				B05B0F7E2686302400CEB199 /* CoreData */,
+				B05B0F7C26862FD700CEB199 /* Coordinators */,
 				B05B0F822686304C00CEB199 /* Extensions */,
-				B05B0F2C26862DE900CEB199 /* Fuze_Tech_Task.xcdatamodeld */,
 				B05B0F3426862DEC00CEB199 /* Info.plist */,
 				B05B0F7D2686300400CEB199 /* MockedData */,
 				B05B0F7B26862FC200CEB199 /* Storyboards */,
@@ -174,6 +179,9 @@
 		B05B0F7E2686302400CEB199 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				B05B0FB626863BB900CEB199 /* Models */,
+				B05B0F2C26862DE900CEB199 /* Fuze_Tech_Task.xcdatamodeld */,
+				B05B0FB726863BDF00CEB199 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -224,6 +232,15 @@
 				B05B0F882686318300CEB199 /* CoordinatorProtocol.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		B05B0FB626863BB900CEB199 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B05B0FAF26863BA500CEB199 /* Tweet+CoreDataClass.swift */,
+				B05B0FB026863BA500CEB199 /* Tweet+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,10 +373,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05B0F962686320100CEB199 /* Session.swift in Sources */,
+				B05B0FB226863BA500CEB199 /* Tweet+CoreDataProperties.swift in Sources */,
 				B05B0F2826862DE900CEB199 /* HomeViewController.swift in Sources */,
 				B05B0F8E268631C400CEB199 /* MainCoordinator.swift in Sources */,
 				B05B0FA8268633BD00CEB199 /* HomeViewModel.swift in Sources */,
 				B05B0F2426862DE900CEB199 /* AppDelegate.swift in Sources */,
+				B05B0FB126863BA500CEB199 /* Tweet+CoreDataClass.swift in Sources */,
+				B05B0FB826863BDF00CEB199 /* CoreDataManager.swift in Sources */,
 				B05B0F892686318300CEB199 /* CoordinatorProtocol.swift in Sources */,
 				B05B0F2E26862DE900CEB199 /* Fuze_Tech_Task.xcdatamodeld in Sources */,
 				B05B0FA0268632D500CEB199 /* RequestManager.swift in Sources */,

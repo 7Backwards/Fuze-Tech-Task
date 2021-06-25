@@ -9,4 +9,18 @@ import Foundation
 
 class RequestManager {
 
+    // MARK: Properties
+
+    let constants: Constants
+    let coreDataManager: CoreDataManager
+
+    // MARK: Lifecycle
+
+    init(
+        constants: Constants,
+        coreDataManager: CoreDataManager
+    ) {
+        self.constants = constants
+        self.coreDataManager = coreDataManager
+    }
 }
