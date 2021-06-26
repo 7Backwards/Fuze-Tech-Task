@@ -55,7 +55,7 @@ class CoreDataManager {
         }
     }
 
-    // Tweet Model
+    // MARK: Tweet Model
 
     func fetchSavedTweets(completion: @escaping ([Tweet]?) -> Void) {
 
@@ -67,6 +67,22 @@ class CoreDataManager {
 
         } catch {
             print("Fetching tweets failed")
+            completion(nil)
+        }
+    }
+
+    // MARK: User Model
+
+    func fetchSavedUsers(completion: @escaping ([User]?) -> Void) {
+
+        let request: NSFetchRequest<User> = User.fetchRequest()
+        request.returnsObjectsAsFaults = false
+        do {
+            let users = try persistentContainer.viewContext.fetch(request)
+            completion(users)
+
+        } catch {
+            print("Fetching users failed")
             completion(nil)
         }
     }

@@ -24,7 +24,7 @@ class RequestManager {
         self.coreDataManager = coreDataManager
     }
 
-    // MARK: Public Methods
+    // MARK: Tweets Model Methods
 
     func requestUpdateTweets(completion: @escaping () -> Void) {
 
@@ -77,6 +77,62 @@ class RequestManager {
             }
 
             completion(tweets)
+        }
+    }
+
+    // MARK: User Model Methods
+
+    func requestUpdateUsers(completion: @escaping () -> Void) {
+
+        guard let pathString = Bundle(for: type(of: self)).path(forResource: "MOCK_Users", ofType: "json") else {
+            fatalError("Json file not found")
+        }
+
+        guard let jsonString = try? String(contentsOfFile: pathString, encoding: .utf8) else {
+            print("Unable to convert json to string")
+            return
+        }
+
+        guard let jsonData = jsonString.data(using: .utf8) else {
+            print("Unable to convert json string to data")
+            return
+        }
+
+        let decoder = JSONDecoder()
+
+        decoder.userInfo[.context] = coreDataManager.persistentContainer.viewContext
+
+        do {
+            _ = try decoder.decode([User].self, from: jsonData)
+        } catch(let error) {
+            print(error)
+            completion()
+        }
+
+        DispatchQueue.main.async { [weak self] in
+
+            guard let self = self else {
+
+                print("Something went wrong! Somehow we've reached here without 'self' value.")
+                return
+            }
+            self.coreDataManager.saveContext()
+            completion()
+        }
+    }
+
+    func requestRetrieveUsersFromDB(completion: @escaping ([User]?) -> Void) {
+        coreDataManager.fetchSavedUsers { users in
+            guard let users = users else {
+                completion(nil)
+                return
+            }
+
+            for user in users {
+                print(user)
+            }
+
+            completion(users)
         }
     }
 }
