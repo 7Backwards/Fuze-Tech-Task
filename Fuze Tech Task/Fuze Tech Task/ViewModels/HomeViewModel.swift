@@ -11,14 +11,13 @@ class HomeViewModel {
 
     // MARK: Properties
 
-    let coordinator: MainCoordinator
+    let coordinator: CoordinatorProtocol
     let session: Session
 
     // MARK: Lifecycle
 
-    init(coordinator: MainCoordinator, session: Session) {
+    init(coordinator: CoordinatorProtocol, session: Session) {
         self.coordinator = coordinator
         self.session = session
     }
-
 }

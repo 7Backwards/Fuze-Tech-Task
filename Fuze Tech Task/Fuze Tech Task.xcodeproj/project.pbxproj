@@ -16,7 +16,7 @@
 		B05B0F3E26862DEC00CEB199 /* Fuze_Tech_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F3D26862DEC00CEB199 /* Fuze_Tech_TaskTests.swift */; };
 		B05B0F4926862DED00CEB199 /* Fuze_Tech_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F4826862DED00CEB199 /* Fuze_Tech_TaskUITests.swift */; };
 		B05B0F892686318300CEB199 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F882686318300CEB199 /* CoordinatorProtocol.swift */; };
-		B05B0F8E268631C400CEB199 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F8D268631C400CEB199 /* MainCoordinator.swift */; };
+		B05B0F8E268631C400CEB199 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F8D268631C400CEB199 /* LoginCoordinator.swift */; };
 		B05B0F962686320100CEB199 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F952686320100CEB199 /* Session.swift */; };
 		B05B0F9B2686322700CEB199 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F9A2686322700CEB199 /* Constants.swift */; };
 		B05B0FA0268632D500CEB199 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0F9F268632D500CEB199 /* RequestManager.swift */; };
@@ -30,6 +30,9 @@
 		B05B0FE42687820600CEB199 /* MOCK_Users.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B0FE32687820500CEB199 /* MOCK_Users.json */; };
 		B05B0FEA2687829000CEB199 /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FE82687829000CEB199 /* Users+CoreDataClass.swift */; };
 		B05B0FEB2687829000CEB199 /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FE92687829000CEB199 /* Users+CoreDataProperties.swift */; };
+		B05B0FFF268786D500CEB199 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FFE268786D500CEB199 /* HomeCoordinator.swift */; };
+		B05B10042687872300CEB199 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B10032687872300CEB199 /* LoginViewController.swift */; };
+		B05B10092687872D00CEB199 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B10082687872D00CEB199 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +68,7 @@
 		B05B0F4826862DED00CEB199 /* Fuze_Tech_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fuze_Tech_TaskUITests.swift; sourceTree = "<group>"; };
 		B05B0F4A26862DED00CEB199 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B05B0F882686318300CEB199 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
-		B05B0F8D268631C400CEB199 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B05B0F8D268631C400CEB199 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		B05B0F952686320100CEB199 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		B05B0F9A2686322700CEB199 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B05B0F9F268632D500CEB199 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
@@ -79,6 +82,9 @@
 		B05B0FE32687820500CEB199 /* MOCK_Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MOCK_Users.json; path = ../../../../../Downloads/MOCK_Users.json; sourceTree = "<group>"; };
 		B05B0FE82687829000CEB199 /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B05B0FE92687829000CEB199 /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B05B0FFE268786D500CEB199 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		B05B10032687872300CEB199 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B05B10082687872D00CEB199 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				B05B0F872686317A00CEB199 /* Base */,
-				B05B0F8D268631C400CEB199 /* MainCoordinator.swift */,
+				B05B0F8D268631C400CEB199 /* LoginCoordinator.swift */,
+				B05B0FFE268786D500CEB199 /* HomeCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -212,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				B05B0F2726862DE900CEB199 /* HomeViewController.swift */,
+				B05B10032687872300CEB199 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				B05B0FA7268633BD00CEB199 /* HomeViewModel.swift */,
+				B05B10082687872D00CEB199 /* LoginViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -396,13 +405,16 @@
 				B05B0FD6268680B700CEB199 /* JSONDecoder+Extensions.swift in Sources */,
 				B05B0F962686320100CEB199 /* Session.swift in Sources */,
 				B05B0FB226863BA500CEB199 /* Tweet+CoreDataProperties.swift in Sources */,
+				B05B10042687872300CEB199 /* LoginViewController.swift in Sources */,
 				B05B0F2826862DE900CEB199 /* HomeViewController.swift in Sources */,
-				B05B0F8E268631C400CEB199 /* MainCoordinator.swift in Sources */,
+				B05B0F8E268631C400CEB199 /* LoginCoordinator.swift in Sources */,
 				B05B0FA8268633BD00CEB199 /* HomeViewModel.swift in Sources */,
+				B05B10092687872D00CEB199 /* LoginViewModel.swift in Sources */,
 				B05B0F2426862DE900CEB199 /* AppDelegate.swift in Sources */,
 				B05B0FB126863BA500CEB199 /* Tweet+CoreDataClass.swift in Sources */,
 				B05B0FB826863BDF00CEB199 /* CoreDataManager.swift in Sources */,
 				B05B0FEA2687829000CEB199 /* Users+CoreDataClass.swift in Sources */,
+				B05B0FFF268786D500CEB199 /* HomeCoordinator.swift in Sources */,
 				B05B0F892686318300CEB199 /* CoordinatorProtocol.swift in Sources */,
 				B05B0F2E26862DE900CEB199 /* Fuze_Tech_Task.xcdatamodeld in Sources */,
 				B05B0FA0268632D500CEB199 /* RequestManager.swift in Sources */,

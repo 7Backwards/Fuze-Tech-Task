@@ -135,4 +135,21 @@ class RequestManager {
             completion(users)
         }
     }
+
+    func requestCheckLoginAttempt(username: String, password: String, completion: @escaping (Bool) -> Void) {
+
+        requestUpdateUsers { [weak self] in
+            self?.requestRetrieveUsersFromDB { users in
+                if let users = users {
+                    for user in users {
+                        if user.username == username && user.password == password {
+                            completion(true)
+                            return
+                        }
+                    }
+                }
+                completion(false)
+            }
+        }
+    }
 }

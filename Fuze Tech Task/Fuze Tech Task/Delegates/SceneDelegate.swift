@@ -34,20 +34,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             requestManager: requestManager
         )
 
-        requestManager.requestUpdateTweets {
-            requestManager.requestRetrieveTweetsFromDB { _ in
-                print("done")
-            }
-        }
-
-
         window = UIWindow(frame: UIScreen.main.bounds)
+
+        if #available(iOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        }
 
         window?.rootViewController = navigationController
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
 
-        MainCoordinator(
+        LoginCoordinator(
             navigationController: navigationController,
             session: session
         ).start()

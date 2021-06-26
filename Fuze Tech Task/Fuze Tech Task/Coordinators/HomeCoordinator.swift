@@ -1,14 +1,14 @@
 //
-//  MainCoordinator.swift
+//  HomeCoordinator.swift
 //  Fuze Tech Task
 //
-//  Created by Gonçalo Neves on 25/06/2021.
+//  Created by Gonçalo Neves on 26/06/2021.
 //
 
 import Foundation
 import UIKit
 
-class MainCoordinator: CoordinatorProtocol {
+class HomeCoordinator: CoordinatorProtocol {
 
     var presentedCoordinator: CoordinatorProtocol?
     var presentedViewController: UIViewController?
