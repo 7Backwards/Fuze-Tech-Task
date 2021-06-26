@@ -24,6 +24,9 @@
 		B05B0FB126863BA500CEB199 /* Tweet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FAF26863BA500CEB199 /* Tweet+CoreDataClass.swift */; };
 		B05B0FB226863BA500CEB199 /* Tweet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FB026863BA500CEB199 /* Tweet+CoreDataProperties.swift */; };
 		B05B0FB826863BDF00CEB199 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FB726863BDF00CEB199 /* CoreDataManager.swift */; };
+		B05B0FCC26867FCB00CEB199 /* MOCK_Tweets.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B0FCB26867FCB00CEB199 /* MOCK_Tweets.json */; };
+		B05B0FD1268680B400CEB199 /* CodingUserInfoKey+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FD0268680B400CEB199 /* CodingUserInfoKey+Extensions.swift */; };
+		B05B0FD6268680B700CEB199 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FD5268680B700CEB199 /* JSONDecoder+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		B05B0FAF26863BA500CEB199 /* Tweet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B05B0FB026863BA500CEB199 /* Tweet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B05B0FB726863BDF00CEB199 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		B05B0FCB26867FCB00CEB199 /* MOCK_Tweets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MOCK_Tweets.json; path = ../../../../../Downloads/MOCK_Tweets.json; sourceTree = "<group>"; };
+		B05B0FD0268680B400CEB199 /* CodingUserInfoKey+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+Extensions.swift"; sourceTree = "<group>"; };
+		B05B0FD5268680B700CEB199 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,7 @@
 		B05B0F7D2686300400CEB199 /* MockedData */ = {
 			isa = PBXGroup;
 			children = (
+				B05B0FCB26867FCB00CEB199 /* MOCK_Tweets.json */,
 			);
 			path = MockedData;
 			sourceTree = "<group>";
@@ -213,6 +220,8 @@
 		B05B0F822686304C00CEB199 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B05B0FD0268680B400CEB199 /* CodingUserInfoKey+Extensions.swift */,
+				B05B0FD5268680B700CEB199 /* JSONDecoder+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -346,6 +355,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05B0FCC26867FCB00CEB199 /* MOCK_Tweets.json in Resources */,
 				B05B0F3326862DEC00CEB199 /* LaunchScreen.storyboard in Resources */,
 				B05B0F3026862DEC00CEB199 /* Assets.xcassets in Resources */,
 			);
@@ -372,6 +382,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05B0FD1268680B400CEB199 /* CodingUserInfoKey+Extensions.swift in Sources */,
+				B05B0FD6268680B700CEB199 /* JSONDecoder+Extensions.swift in Sources */,
 				B05B0F962686320100CEB199 /* Session.swift in Sources */,
 				B05B0FB226863BA500CEB199 /* Tweet+CoreDataProperties.swift in Sources */,
 				B05B0F2826862DE900CEB199 /* HomeViewController.swift in Sources */,

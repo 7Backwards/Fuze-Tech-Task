@@ -54,4 +54,20 @@ class CoreDataManager {
             }
         }
     }
+
+    // Tweet Model
+
+    func fetchSavedTweets(completion: @escaping ([Tweet]?) -> Void) {
+
+        let request: NSFetchRequest<Tweet> = Tweet.fetchRequest()
+        request.returnsObjectsAsFaults = false
+        do {
+            let tweets = try persistentContainer.viewContext.fetch(request)
+            completion(tweets)
+
+        } catch {
+            print("Fetching tweets failed")
+            completion(nil)
+        }
+    }
 }

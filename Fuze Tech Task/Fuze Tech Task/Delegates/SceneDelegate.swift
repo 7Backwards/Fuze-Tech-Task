@@ -25,13 +25,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         let constants = Constants()
 
+        let requestManager = RequestManager(
+            constants: constants,
+            coreDataManager: coreDataManager
+        )
         let session = Session(
             constants: constants,
-            requestManager: RequestManager(
-                constants: constants,
-                coreDataManager: coreDataManager
-            )
+            requestManager: requestManager
         )
+
+        requestManager.requestUpdateTweets {
+            requestManager.requestRetrieveTweetsFromDB { _ in
+                print("done")
+            }
+        }
+
 
         window = UIWindow(frame: UIScreen.main.bounds)
 
