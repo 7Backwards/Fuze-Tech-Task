@@ -44,10 +44,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
 
-        LoginCoordinator(
-            navigationController: navigationController,
-            session: session
-        ).start()
+        if UserDefaults.standard.value(forKey: "sessionUsername") != nil {
+            HomeCoordinator(
+                navigationController: navigationController,
+                session: session
+            ).start()
+        } else {
+            LoginCoordinator(
+                navigationController: navigationController,
+                session: session
+            ).start()
+        }
     }
 
     // MARK: Lifecycle

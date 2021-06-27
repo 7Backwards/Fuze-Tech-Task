@@ -13,6 +13,7 @@ import CoreData
 public class Tweet: NSManagedObject, Decodable {
 
     enum CodingKeys: String, CodingKey {
+        case tweetId = "id"
         case content = "content"
         case date = "date"
         case sender = "sender"
@@ -31,8 +32,9 @@ public class Tweet: NSManagedObject, Decodable {
 
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        self.content = try container.decodeIfPresent(String.self, forKey: .content)
-        self.date = try container.decodeIfPresent(String.self, forKey: .date)
-        self.sender = try container.decodeIfPresent(String.self, forKey: .sender)
+        self.tweetId = try container.decodeIfPresent(String.self, forKey: .tweetId)!
+        self.content = try container.decodeIfPresent(String.self, forKey: .content)!
+        self.date = try container.decodeIfPresent(String.self, forKey: .date)!
+        self.sender = try container.decodeIfPresent(String.self, forKey: .sender)!
     }
 }

@@ -57,6 +57,31 @@ class CoreDataManager {
 
     // MARK: Tweet Model
 
+    func removeDuplicateTweets() {
+
+        let fetchRequest: NSFetchRequest<Tweet> = Tweet.fetchRequest()
+        let context = persistentContainer.viewContext
+
+        do {
+            var tweets = try context.fetch(fetchRequest)
+
+            for tweet in tweets {
+                let countDuplicateTweets = tweets.filter { filteringTweet -> Bool in
+                    filteringTweet.tweetId == tweet.tweetId
+                }.count
+
+                if countDuplicateTweets > 1 {
+                    context.delete(tweet)
+                    if let index = tweets.firstIndex(where: {$0 == tweet}) {
+                      tweets.remove(at: index)
+                    }
+                }
+            }
+        } catch(let error) {
+            print(error)
+        }
+    }
+
     func fetchSavedTweets(completion: @escaping ([Tweet]?) -> Void) {
 
         let request: NSFetchRequest<Tweet> = Tweet.fetchRequest()
@@ -71,7 +96,76 @@ class CoreDataManager {
         }
     }
 
+    func getIdForNewTweet(completion: @escaping (Int?) -> Void) {
+
+        fetchSavedTweets { tweets in
+
+            guard let tweets = tweets else {
+                return
+            }
+
+            tweets.map(\.tweetId).map { tweetIdString -> Int? in
+                return Int(tweetIdString)
+            }
+            .compactMap { $0 }
+            .max()
+            .flatMap { maxId -> Void in
+                completion(maxId + 1)
+            }
+
+            completion(nil)
+        }
+    }
+
+    func saveTweet(sender: String, date: String, content: String, completion: @escaping (Bool) -> Void) {
+
+        let newTweet = Tweet(context: persistentContainer.viewContext)
+
+        newTweet.content = content
+        newTweet.sender = sender
+        newTweet.date = date
+        getIdForNewTweet { [weak self] id in
+
+            guard let id = id else {
+                completion(false)
+                return
+            }
+            newTweet.tweetId = String(id)
+
+            self?.saveContext()
+            completion(true)
+        }
+
+        
+    }
+
     // MARK: User Model
+
+    func removeDuplicateUsers() {
+
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        let context = persistentContainer.viewContext
+
+        do {
+            var users = try context.fetch(fetchRequest)
+
+            for user in users {
+
+                let countDuplicateUsers = users.filter { filteringUser -> Bool in
+                    filteringUser.userId == user.userId
+                }.count
+
+                if countDuplicateUsers > 1 {
+                    context.delete(user)
+                    if let index = users.firstIndex(where: {$0 == user}) {
+                        users.remove(at: index)
+                    }
+                }
+            }
+        } catch(let error) {
+            print(error)
+        }
+    }
 
     func fetchSavedUsers(completion: @escaping ([User]?) -> Void) {
 

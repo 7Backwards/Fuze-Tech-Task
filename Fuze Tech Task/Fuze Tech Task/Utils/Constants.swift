@@ -9,4 +9,5 @@ import Foundation
 
 class Constants {
 
+    let navigationItemTitle = "Twitter"
 }

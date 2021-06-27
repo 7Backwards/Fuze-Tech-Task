@@ -31,7 +31,7 @@ class LoginCoordinator: CoordinatorProtocol {
         let loginViewModel = LoginViewModel(coordinator: self, session: session)
         let loginViewController = LoginViewController(viewModel: loginViewModel)
         presentedViewController = loginViewController
-        navigationController.pushViewController(loginViewController, animated: true)
+        navigationController.pushViewController(loginViewController, animated: false)
     }
 
     func login(username: String, password: String, completion: @escaping (Bool) -> Void) {
@@ -48,6 +48,8 @@ class LoginCoordinator: CoordinatorProtocol {
             if loginAttempt {
 
                 let homeCoordinator = HomeCoordinator(navigationController: self.navigationController, session: self.session)
+
+                UserDefaults.standard.set(username, forKey: "sessionUsername")
 
                 completion(true)
 

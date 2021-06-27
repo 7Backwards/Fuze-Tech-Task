@@ -13,6 +13,7 @@ import CoreData
 public class User: NSManagedObject, Decodable {
 
     enum CodingKeys: String, CodingKey {
+        case userId = "id"
         case username = "username"
         case password = "password"
     }
@@ -30,7 +31,8 @@ public class User: NSManagedObject, Decodable {
 
         let container = try decoder.container(keyedBy: CodingKeys.self)
 
-        self.username = try container.decodeIfPresent(String.self, forKey: .username)
-        self.password = try container.decodeIfPresent(String.self, forKey: .password)
+        self.userId = try container.decodeIfPresent(String.self, forKey: .userId)!
+        self.username = try container.decodeIfPresent(String.self, forKey: .username)!
+        self.password = try container.decodeIfPresent(String.self, forKey: .password)!
     }
 }

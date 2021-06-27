@@ -26,6 +26,18 @@ class RequestManager {
 
     // MARK: Tweets Model Methods
 
+    func requestSubmitTweet(content: String, completion: @escaping (Bool) -> Void) {
+
+        let dateFormattedString = Date().getFormattedDate(format: "dd/MM/yyyy")
+        guard let username = UserDefaults.standard.value(forKey: "sessionUsername") as? String else {
+            return
+        }
+
+        coreDataManager.saveTweet(sender: username, date: dateFormattedString, content: content) { result in
+            completion(result)
+        }
+    }
+
     func requestUpdateTweets(completion: @escaping () -> Void) {
 
         guard let pathString = Bundle(for: type(of: self)).path(forResource: "MOCK_Tweets", ofType: "json") else {
@@ -45,9 +57,13 @@ class RequestManager {
         let decoder = JSONDecoder()
 
         decoder.userInfo[.context] = coreDataManager.persistentContainer.viewContext
-
+        
         do {
+            
             _ = try decoder.decode([Tweet].self, from: jsonData)
+
+            coreDataManager.removeDuplicateTweets()
+
         } catch(let error) {
             print(error)
             completion()
@@ -104,6 +120,9 @@ class RequestManager {
 
         do {
             _ = try decoder.decode([User].self, from: jsonData)
+
+            coreDataManager.removeDuplicateUsers()
+
         } catch(let error) {
             print(error)
             completion()
@@ -126,10 +145,6 @@ class RequestManager {
             guard let users = users else {
                 completion(nil)
                 return
-            }
-
-            for user in users {
-                print(user)
             }
 
             completion(users)

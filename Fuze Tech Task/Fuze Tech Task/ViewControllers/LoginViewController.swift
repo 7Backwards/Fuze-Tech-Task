@@ -143,6 +143,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         setupUI()
 
+        navigationItem.hidesBackButton = true
+
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
@@ -203,7 +205,7 @@ class LoginViewController: UIViewController {
     @objc func keyboardWillShow(notification: NSNotification) {
 
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            containerViewBottomConstraint.isActive = false
+            containerViewCenterYConstraint.isActive = false
             containerViewBottomConstraint.constant = -keyboardSize.height - viewModel.outerConstraintConstant
             containerViewBottomConstraint.isActive = true
         }

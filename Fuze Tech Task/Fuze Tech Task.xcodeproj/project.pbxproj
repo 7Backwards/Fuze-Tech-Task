@@ -33,6 +33,9 @@
 		B05B0FFF268786D500CEB199 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FFE268786D500CEB199 /* HomeCoordinator.swift */; };
 		B05B10042687872300CEB199 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B10032687872300CEB199 /* LoginViewController.swift */; };
 		B05B10092687872D00CEB199 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B10082687872D00CEB199 /* LoginViewModel.swift */; };
+		B05B102D2687D49000CEB199 /* TweetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B102C2687D49000CEB199 /* TweetsCollectionViewCell.swift */; };
+		B05B103D2688171100CEB199 /* NewTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B103C2688171100CEB199 /* NewTweetViewController.swift */; };
+		B05B10422688229800CEB199 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B10412688229800CEB199 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		B05B0FFE268786D500CEB199 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		B05B10032687872300CEB199 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B05B10082687872D00CEB199 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B05B102C2687D49000CEB199 /* TweetsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsCollectionViewCell.swift; sourceTree = "<group>"; };
+		B05B103C2688171100CEB199 /* NewTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetViewController.swift; sourceTree = "<group>"; };
+		B05B10412688229800CEB199 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,8 @@
 			children = (
 				B05B0F2726862DE900CEB199 /* HomeViewController.swift */,
 				B05B10032687872300CEB199 /* LoginViewController.swift */,
+				B05B102C2687D49000CEB199 /* TweetsCollectionViewCell.swift */,
+				B05B103C2688171100CEB199 /* NewTweetViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 			children = (
 				B05B0FD0268680B400CEB199 /* CodingUserInfoKey+Extensions.swift */,
 				B05B0FD5268680B700CEB199 /* JSONDecoder+Extensions.swift */,
+				B05B10412688229800CEB199 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05B0FD1268680B400CEB199 /* CodingUserInfoKey+Extensions.swift in Sources */,
+				B05B103D2688171100CEB199 /* NewTweetViewController.swift in Sources */,
 				B05B0FD6268680B700CEB199 /* JSONDecoder+Extensions.swift in Sources */,
 				B05B0F962686320100CEB199 /* Session.swift in Sources */,
 				B05B0FB226863BA500CEB199 /* Tweet+CoreDataProperties.swift in Sources */,
@@ -409,12 +419,14 @@
 				B05B0F2826862DE900CEB199 /* HomeViewController.swift in Sources */,
 				B05B0F8E268631C400CEB199 /* LoginCoordinator.swift in Sources */,
 				B05B0FA8268633BD00CEB199 /* HomeViewModel.swift in Sources */,
+				B05B102D2687D49000CEB199 /* TweetsCollectionViewCell.swift in Sources */,
 				B05B10092687872D00CEB199 /* LoginViewModel.swift in Sources */,
 				B05B0F2426862DE900CEB199 /* AppDelegate.swift in Sources */,
 				B05B0FB126863BA500CEB199 /* Tweet+CoreDataClass.swift in Sources */,
 				B05B0FB826863BDF00CEB199 /* CoreDataManager.swift in Sources */,
 				B05B0FEA2687829000CEB199 /* Users+CoreDataClass.swift in Sources */,
 				B05B0FFF268786D500CEB199 /* HomeCoordinator.swift in Sources */,
+				B05B10422688229800CEB199 /* Date+Extensions.swift in Sources */,
 				B05B0F892686318300CEB199 /* CoordinatorProtocol.swift in Sources */,
 				B05B0F2E26862DE900CEB199 /* Fuze_Tech_Task.xcdatamodeld in Sources */,
 				B05B0FA0268632D500CEB199 /* RequestManager.swift in Sources */,

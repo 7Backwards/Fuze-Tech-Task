@@ -16,8 +16,9 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var username: String?
-    @NSManaged public var password: String?
+    @NSManaged public var userId: String
+    @NSManaged public var username: String
+    @NSManaged public var password: String
 
 }
 

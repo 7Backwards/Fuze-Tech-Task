@@ -20,5 +20,4 @@ protocol CoordinatorProtocol {
 
     // Starts the coordinator by presenting the viewController
     func start()
-
 }
