@@ -38,6 +38,9 @@
 		B05B10422688229800CEB199 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B10412688229800CEB199 /* Date+Extensions.swift */; };
 		B08CBDF52688D4DD00076305 /* MOCK_Tweets.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B0FCB26867FCB00CEB199 /* MOCK_Tweets.json */; };
 		B08CBDF92688D4E000076305 /* MOCK_Users.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B0FE32687820500CEB199 /* MOCK_Users.json */; };
+		B08CBE352688E66C00076305 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B08CBE372688E66C00076305 /* Localizable.strings */; };
+		B08CBE482688E69800076305 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B08CBE4A2688E69800076305 /* Localizable.strings */; };
+		B08CBE4F2688E74000076305 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08CBE4E2688E74000076305 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,10 @@
 		B05B102C2687D49000CEB199 /* TweetsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsCollectionViewCell.swift; sourceTree = "<group>"; };
 		B05B103C2688171100CEB199 /* NewTweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTweetViewController.swift; sourceTree = "<group>"; };
 		B05B10412688229800CEB199 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		B08CBE2C2688E64700076305 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		B08CBE362688E66C00076305 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		B08CBE492688E69800076305 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B08CBE4E2688E74000076305 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +163,8 @@
 				B05B0F812686304300CEB199 /* ViewModels */,
 				B05B0F952686320100CEB199 /* Session.swift */,
 				B05B0F9F268632D500CEB199 /* RequestManager.swift */,
+				B08CBE372688E66C00076305 /* Localizable.strings */,
+				B08CBE4A2688E69800076305 /* Localizable.strings */,
 			);
 			path = "Fuze Tech Task";
 			sourceTree = "<group>";
@@ -249,6 +258,7 @@
 				B05B0FD0268680B400CEB199 /* CodingUserInfoKey+Extensions.swift */,
 				B05B0FD5268680B700CEB199 /* JSONDecoder+Extensions.swift */,
 				B05B10412688229800CEB199 /* Date+Extensions.swift */,
+				B08CBE4E2688E74000076305 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,6 +376,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"pt-PT",
 			);
 			mainGroup = B05B0F1726862DE900CEB199;
 			productRefGroup = B05B0F2126862DE900CEB199 /* Products */;
@@ -386,7 +397,9 @@
 			files = (
 				B05B0FCC26867FCB00CEB199 /* MOCK_Tweets.json in Resources */,
 				B05B0FE42687820600CEB199 /* MOCK_Users.json in Resources */,
+				B08CBE352688E66C00076305 /* Localizable.strings in Resources */,
 				B05B0F3326862DEC00CEB199 /* LaunchScreen.storyboard in Resources */,
+				B08CBE482688E69800076305 /* Localizable.strings in Resources */,
 				B05B0F3026862DEC00CEB199 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +431,7 @@
 				B05B103D2688171100CEB199 /* NewTweetViewController.swift in Sources */,
 				B05B0FD6268680B700CEB199 /* JSONDecoder+Extensions.swift in Sources */,
 				B05B0F962686320100CEB199 /* Session.swift in Sources */,
+				B08CBE4F2688E74000076305 /* String+Extensions.swift in Sources */,
 				B05B0FB226863BA500CEB199 /* Tweet+CoreDataProperties.swift in Sources */,
 				B05B10042687872300CEB199 /* LoginViewController.swift in Sources */,
 				B05B0F2826862DE900CEB199 /* HomeViewController.swift in Sources */,
@@ -476,8 +490,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				B05B0F3226862DEC00CEB199 /* Base */,
+				B08CBE2C2688E64700076305 /* pt-PT */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B08CBE372688E66C00076305 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B08CBE362688E66C00076305 /* pt-PT */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B08CBE4A2688E69800076305 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B08CBE492688E69800076305 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

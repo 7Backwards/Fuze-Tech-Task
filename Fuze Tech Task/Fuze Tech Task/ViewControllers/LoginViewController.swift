@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
     lazy var titleLabel: UILabel = {
         
         let label = UILabel()
-        label.text = "Log in"
+        label.text = "loginTitle".localized()
         label.textAlignment = .center
         label.font = .boldSystemFont(ofSize: 25)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -73,7 +73,7 @@ class LoginViewController: UIViewController {
     lazy var usernameLabel: UILabel = {
 
         let label = UILabel()
-        label.text = "Username:"
+        label.text = "loginUsernameLabel".localized()
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -82,7 +82,7 @@ class LoginViewController: UIViewController {
     lazy var passwordLabel: UILabel = {
 
         let label = UILabel()
-        label.text = "Password:"
+        label.text = "loginPasswordLabel".localized()
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -114,7 +114,7 @@ class LoginViewController: UIViewController {
         
         button.backgroundColor = .systemBlue
         button.setTitleColor(.black, for: .normal)
-        button.setTitle("Login", for: .normal)
+        button.setTitle("loginTitle".localized(), for: .normal)
         button.layer.cornerRadius = viewModel.cornerRadius
         button.titleLabel?.textAlignment = .center
         button.addTarget(self, action: #selector(logInButtonPressed), for: .touchUpInside)
@@ -195,8 +195,8 @@ class LoginViewController: UIViewController {
         viewModel.makeLogin(username: usernameTextField, password: passwordTextField) { [weak self] result in
             if !result {
 
-                let alert = UIAlertController(title: "Login Error", message: "Please check your login credentials", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Try again", style: .default))
+                let alert = UIAlertController(title: "loginFailedTitle".localized(), message: "loginFailedMessage".localized(), preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "loginFailedAction".localized(), style: .default))
                 self?.present(alert, animated: true, completion: nil)
             }
         }

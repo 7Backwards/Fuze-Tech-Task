@@ -15,13 +15,14 @@ class NewTweetViewModel {
     let coordinator: CoordinatorProtocol
     let session: Session
     let cornerRadius: CGFloat = 10
-    let verticalStackViewSpacing: CGFloat = 20
+    let verticalStackViewSpacing: CGFloat = 10
     let containerViewCornerRadius: CGFloat = 20
     let outerConstraintConstant: CGFloat = 15
     let containerViewSize: CGFloat = 300
     let containerViewShadowOpacity: Float = 1
     let containerViewShadowRadius: CGFloat = 5
     let containerViewShadowOffset: CGSize = CGSize(width: 0, height: 2)
+    let popUpTitle: CGFloat = 30
 
     // MARK: Lifecycle
 
@@ -76,7 +77,6 @@ class NewTweetViewController: UIViewController {
 
         stackView.axis = .vertical
         stackView.alignment = .fill
-        stackView.spacing = 10
         stackView.spacing = viewModel.verticalStackViewSpacing
         stackView.distribution = .fill
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -85,7 +85,7 @@ class NewTweetViewController: UIViewController {
 
     lazy var popUpTitle: UILabel = {
         let label = UILabel()
-        label.text = "New Tweet"
+        label.text = "newTweetTitle".localized()
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -105,7 +105,7 @@ class NewTweetViewController: UIViewController {
         
         button.backgroundColor = .systemBlue
         button.setTitleColor(.black, for: .normal)
-        button.setTitle("Login", for: .normal)
+        button.setTitle("loginTitle".localized(), for: .normal)
         button.layer.cornerRadius = viewModel.cornerRadius
         button.titleLabel?.textAlignment = .center
         button.addTarget(self, action: #selector(submitTweet), for: .touchUpInside)
@@ -159,7 +159,7 @@ class NewTweetViewController: UIViewController {
             popUpTitle.topAnchor.constraint(equalTo: containerView.topAnchor, constant: viewModel.outerConstraintConstant),
             popUpTitle.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: viewModel.outerConstraintConstant),
             popUpTitle.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -viewModel.outerConstraintConstant),
-            popUpTitle.heightAnchor.constraint(equalToConstant: 30),
+            popUpTitle.heightAnchor.constraint(equalToConstant: viewModel.popUpTitle),
             verticalStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: viewModel.outerConstraintConstant),
             verticalStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -viewModel.outerConstraintConstant),
             verticalStackView.topAnchor.constraint(equalTo: popUpTitle.bottomAnchor, constant: viewModel.outerConstraintConstant),
@@ -177,8 +177,8 @@ class NewTweetViewController: UIViewController {
 
             if !result {
 
-                let alert = UIAlertController(title: "Submit Error", message: "Please try again", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default))
+                let alert = UIAlertController(title: "failedSubmitNewTweetTitle".localized(), message: "failedSubmitNewTweetMessage".localized(), preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "failedSubmitNewTweetAction".localized(), style: .default))
                 self?.present(alert, animated: true, completion: nil)
             } else {
                 self?.viewModel.forceTweetCollectionViewRefresh()

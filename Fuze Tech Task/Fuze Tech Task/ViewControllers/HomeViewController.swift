@@ -123,7 +123,7 @@ class HomeViewController: UIViewController {
     private func setupUI() {
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(newTweet))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "logoutText".localized(), style: .plain, target: self, action: #selector(logout))
         navigationItem.title = viewModel.coordinator.session.constants.navigationItemTitle
         view.backgroundColor = .white
 

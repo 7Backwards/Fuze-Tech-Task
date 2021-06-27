@@ -47,7 +47,6 @@ class TweetsCollectionViewCell: UICollectionViewCell {
     lazy var contentLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "tweet content"
         label.numberOfLines = 0
         return label
     }()
@@ -55,14 +54,12 @@ class TweetsCollectionViewCell: UICollectionViewCell {
     lazy var senderLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "sender content"
         return label
     }()
 
     lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "date content"
         label.textAlignment = .right
         return label
     }()
