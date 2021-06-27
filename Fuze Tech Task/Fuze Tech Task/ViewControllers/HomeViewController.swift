@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout()
         let width = view.frame.width - (2 * viewModel.horizontalConstraintConstant)
-        layout.itemSize = CGSize(width: width, height: 200)
+        layout.itemSize = CGSize(width: width, height: viewModel.cellHeight)
 
         return layout
     }()
@@ -165,7 +165,6 @@ extension HomeViewController: UICollectionViewDataSource {
 
         return viewModel.tweetsData.count
     }
-
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath as IndexPath) as! TweetsCollectionViewCell

@@ -10,15 +10,21 @@ import UIKit
 
 class HomeCoordinator: CoordinatorProtocol {
 
+    // MARK: Properties
+
     var presentedCoordinator: CoordinatorProtocol?
     var presentedViewController: UIViewController?
     var navigationController: UINavigationController
     var session: Session
 
+    // MARK: Lifecycle
+
     init(navigationController: UINavigationController, session: Session) {
         self.navigationController = navigationController
         self.session = session
     }
+
+    // MARK: Public Methods
 
     func start() {
 
