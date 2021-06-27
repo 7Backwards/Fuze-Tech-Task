@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import OSLog
 
 class HomeViewModel {
 
@@ -38,7 +39,7 @@ class HomeViewModel {
                     let tweets = tweets,
                     let strongSelf = self
                 else {
-                    print("No tweets retrieved")
+                    os_log("No tweets retrieved from DB", type: .info)
                     completion()
                     return
                 }
@@ -55,13 +56,13 @@ class HomeViewModel {
         session.requestManager.requestRetrieveTweetsFromDB() { [weak self] tweets in
 
             guard let strongSelf = self else {
-                print("Something went wrong! Somehow we've reached here without 'self' value.")
+                os_log("Something went wrong! Somehow we've reached here without 'self' value.", type: .error)
                 completion(false)
                 return
             }
 
             guard let tweets = tweets else {
-                print("Error unwrapping tweets retrieved from database")
+                os_log("Error unwrapping tweets retrieved from database", type: .error)
                 completion(false)
                 return
             }

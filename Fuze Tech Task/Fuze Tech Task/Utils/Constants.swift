@@ -10,4 +10,5 @@ import Foundation
 class Constants {
 
     let navigationItemTitle = "Twitter"
+    let dateFormat = "dd/MM/yyyy"
 }

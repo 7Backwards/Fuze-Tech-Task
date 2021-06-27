@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OSLog
 
 class RequestManager {
 
@@ -28,7 +29,7 @@ class RequestManager {
 
     func requestSubmitTweet(content: String, completion: @escaping (Bool) -> Void) {
 
-        let dateFormattedString = Date().getFormattedDate(format: "dd/MM/yyyy")
+        let dateFormattedString = Date().getFormattedDate(format: constants.dateFormat)
         guard let username = UserDefaults.standard.value(forKey: "sessionUsername") as? String else {
             return
         }
@@ -41,16 +42,17 @@ class RequestManager {
     func requestUpdateTweets(completion: @escaping () -> Void) {
 
         guard let pathString = Bundle(for: type(of: self)).path(forResource: "MOCK_Tweets", ofType: "json") else {
-            fatalError("Json file not found")
+            os_log("Json file not found", type: .error)
+            return
         }
 
         guard let jsonString = try? String(contentsOfFile: pathString, encoding: .utf8) else {
-            print("Unable to convert json to string")
+            os_log("Unable to convert json to string", type: .error)
             return
         }
 
         guard let jsonData = jsonString.data(using: .utf8) else {
-            print("Unable to convert json string to data")
+            os_log("Unable to convert json string to data", type: .error)
             return
         }
 
@@ -65,7 +67,7 @@ class RequestManager {
             coreDataManager.removeDuplicateTweets()
 
         } catch(let error) {
-            print(error)
+            os_log("Error: %@", type: .error, String(describing: error))
             completion()
         }
 
@@ -73,7 +75,7 @@ class RequestManager {
 
             guard let self = self else {
 
-                print("Something went wrong! Somehow we've reached here without 'self' value.")
+                os_log("Something went wrong! Somehow we've reached here without 'self' value.", type: .error)
                 return
             }
             self.coreDataManager.saveContext()
@@ -89,7 +91,7 @@ class RequestManager {
             }
 
             for tweet in tweets {
-                print(tweet)
+                os_log("Fetched from DB: %@", type: .info, String(describing: tweet))
             }
 
             completion(tweets)
@@ -101,16 +103,17 @@ class RequestManager {
     func requestUpdateUsers(completion: @escaping () -> Void) {
 
         guard let pathString = Bundle(for: type(of: self)).path(forResource: "MOCK_Users", ofType: "json") else {
-            fatalError("Json file not found")
+            os_log("Json file not found", type: .error)
+            return
         }
 
         guard let jsonString = try? String(contentsOfFile: pathString, encoding: .utf8) else {
-            print("Unable to convert json to string")
+            os_log("Unable to convert json to string", type: .error)
             return
         }
 
         guard let jsonData = jsonString.data(using: .utf8) else {
-            print("Unable to convert json string to data")
+            os_log("Unable to convert json string to data", type: .error)
             return
         }
 
@@ -124,7 +127,7 @@ class RequestManager {
             coreDataManager.removeDuplicateUsers()
 
         } catch(let error) {
-            print(error)
+            os_log("Error: %@", type: .error, String(describing: error))
             completion()
         }
 
@@ -132,7 +135,7 @@ class RequestManager {
 
             guard let self = self else {
 
-                print("Something went wrong! Somehow we've reached here without 'self' value.")
+                os_log("Something went wrong! Somehow we've reached here without 'self' value.", type: .error)
                 return
             }
             self.coreDataManager.saveContext()
@@ -158,11 +161,13 @@ class RequestManager {
                 if let users = users {
                     for user in users {
                         if user.username == username && user.password == password {
+                            os_log("Login for user: %@ successful", type: .info, username)
                             completion(true)
                             return
                         }
                     }
                 }
+                os_log("Login for user: %@ failed", type: .info, username)
                 completion(false)
             }
         }

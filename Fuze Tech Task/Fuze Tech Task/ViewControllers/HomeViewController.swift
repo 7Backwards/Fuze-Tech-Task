@@ -5,6 +5,7 @@
 //  Created by Gonçalo Neves on 25/06/2021.
 //
 
+import OSLog
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -35,7 +36,7 @@ class HomeViewController: UIViewController {
 
         guard let self = self else {
 
-            print("Error unwrapping tweets retrieved from database")
+            os_log("Something went wrong! Somehow we've reached here without 'self' value.", type: .error)
 
             return UICollectionView()
         }

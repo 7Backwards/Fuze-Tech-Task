@@ -5,7 +5,7 @@
 //  Created by Gonçalo Neves on 25/06/2021.
 //
 
-import Foundation
+import OSLog
 import UIKit
 
 class LoginCoordinator: CoordinatorProtocol {
@@ -40,7 +40,7 @@ class LoginCoordinator: CoordinatorProtocol {
 
             guard let self = self else {
 
-                print("self not found")
+                os_log("Something went wrong! Somehow we've reached here without 'self' value.", type: .error)
                 completion(false)
                 return
             }

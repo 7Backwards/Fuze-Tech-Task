@@ -7,6 +7,7 @@
 
 import CoreData
 import Foundation
+import OSLog
 
 class CoreDataManager {
 
@@ -46,7 +47,8 @@ class CoreDataManager {
         if context.hasChanges {
             do {
                 try context.save()
-            } catch {
+            } catch(let error) {
+                os_log("Error: %@", type: .error, String(describing: error))
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
@@ -78,7 +80,7 @@ class CoreDataManager {
                 }
             }
         } catch(let error) {
-            print(error)
+            os_log("Error: %@", type: .error, String(describing: error))
         }
     }
 
@@ -88,10 +90,14 @@ class CoreDataManager {
         request.returnsObjectsAsFaults = false
         do {
             let tweets = try persistentContainer.viewContext.fetch(request)
+            for tweet in tweets {
+
+                os_log("Fetched tweet from DB: %@", type: .info, String(describing: tweet))
+            }
             completion(tweets)
 
-        } catch {
-            print("Fetching tweets failed")
+        } catch(let error) {
+            os_log("Error Fetching Tweets: %@", type: .error, String(describing: error))
             completion(nil)
         }
     }
@@ -132,11 +138,11 @@ class CoreDataManager {
             }
             newTweet.tweetId = String(id)
 
+            os_log("Saved new tweet to DB: %@", type: .info, String(describing: newTweet))
+
             self?.saveContext()
             completion(true)
         }
-
-        
     }
 
     // MARK: User Model
@@ -163,7 +169,7 @@ class CoreDataManager {
                 }
             }
         } catch(let error) {
-            print(error)
+            os_log("Error: %@", type: .error, String(describing: error))
         }
     }
 
@@ -173,10 +179,14 @@ class CoreDataManager {
         request.returnsObjectsAsFaults = false
         do {
             let users = try persistentContainer.viewContext.fetch(request)
+            for user in users {
+
+                os_log("Fetched user from DB: %@", type: .info, String(describing: user))
+            }
             completion(users)
 
         } catch {
-            print("Fetching users failed")
+            os_log("Error Fetching Users: %@", type: .error, String(describing: error))
             completion(nil)
         }
     }
