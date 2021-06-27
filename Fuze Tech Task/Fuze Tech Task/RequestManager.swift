@@ -31,6 +31,7 @@ class RequestManager {
 
         let dateFormattedString = Date().getFormattedDate(format: constants.dateFormat)
         guard let username = UserDefaults.standard.value(forKey: "sessionUsername") as? String else {
+            os_log("Failed getting username from UserDefaults", type: .error)
             return
         }
 

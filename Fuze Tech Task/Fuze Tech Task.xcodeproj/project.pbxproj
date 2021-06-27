@@ -36,6 +36,8 @@
 		B05B102D2687D49000CEB199 /* TweetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B102C2687D49000CEB199 /* TweetsCollectionViewCell.swift */; };
 		B05B103D2688171100CEB199 /* NewTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B103C2688171100CEB199 /* NewTweetViewController.swift */; };
 		B05B10422688229800CEB199 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B10412688229800CEB199 /* Date+Extensions.swift */; };
+		B08CBDF52688D4DD00076305 /* MOCK_Tweets.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B0FCB26867FCB00CEB199 /* MOCK_Tweets.json */; };
+		B08CBDF92688D4E000076305 /* MOCK_Users.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B0FE32687820500CEB199 /* MOCK_Users.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -393,6 +395,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B08CBDF92688D4E000076305 /* MOCK_Users.json in Resources */,
+				B08CBDF52688D4DD00076305 /* MOCK_Tweets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
