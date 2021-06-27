@@ -1,0 +1,20 @@
+/* 
+  Localizable (EN).strings
+  Fuze Tech Task
+
+  Created by Gonçalo Neves on 27/06/2021.
+  
+*/
+
+"logoutText" = "Logout";
+"loginTitle" = "Log in";
+"loginUsernameLabel" = "Username:";
+"loginPasswordLabel" = "Password:";
+"loginFailedMessage" = "Please verify your credentials";
+"loginFailedTitle" = "Error on Login";
+"loginFailedAction" = "Try again";
+"newTweetTitle" = "New Tweet";
+"failedSubmitNewTweetTitle" = "Submit Error";
+"failedSubmitNewTweetMessage" = "Please try again";
+"failedSubmitNewTweetAction" = "Ok";
+
