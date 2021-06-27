@@ -5,7 +5,7 @@ This project consists in an app that retrieves tweets form a mock API and displa
 ## Features
 
 - MVVM-C architecture
-- CoreData to save the tweets data in memory
+- CoreData to save tweets data in memory
 - Log in session
 - Logging using os_log
 - Unit testing to make sure the functionality is working as expected
