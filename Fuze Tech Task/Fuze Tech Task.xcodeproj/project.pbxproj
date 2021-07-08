@@ -24,10 +24,8 @@
 		B05B0FB126863BA500CEB199 /* Tweet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FAF26863BA500CEB199 /* Tweet+CoreDataClass.swift */; };
 		B05B0FB226863BA500CEB199 /* Tweet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FB026863BA500CEB199 /* Tweet+CoreDataProperties.swift */; };
 		B05B0FB826863BDF00CEB199 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FB726863BDF00CEB199 /* CoreDataManager.swift */; };
-		B05B0FCC26867FCB00CEB199 /* MOCK_Tweets.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B0FCB26867FCB00CEB199 /* MOCK_Tweets.json */; };
 		B05B0FD1268680B400CEB199 /* CodingUserInfoKey+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FD0268680B400CEB199 /* CodingUserInfoKey+Extensions.swift */; };
 		B05B0FD6268680B700CEB199 /* JSONDecoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FD5268680B700CEB199 /* JSONDecoder+Extensions.swift */; };
-		B05B0FE42687820600CEB199 /* MOCK_Users.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B0FE32687820500CEB199 /* MOCK_Users.json */; };
 		B05B0FEA2687829000CEB199 /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FE82687829000CEB199 /* Users+CoreDataClass.swift */; };
 		B05B0FEB2687829000CEB199 /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FE92687829000CEB199 /* Users+CoreDataProperties.swift */; };
 		B05B0FFF268786D500CEB199 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B0FFE268786D500CEB199 /* HomeCoordinator.swift */; };
@@ -36,11 +34,11 @@
 		B05B102D2687D49000CEB199 /* TweetsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B102C2687D49000CEB199 /* TweetsCollectionViewCell.swift */; };
 		B05B103D2688171100CEB199 /* NewTweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B103C2688171100CEB199 /* NewTweetViewController.swift */; };
 		B05B10422688229800CEB199 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B10412688229800CEB199 /* Date+Extensions.swift */; };
-		B08CBDF52688D4DD00076305 /* MOCK_Tweets.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B0FCB26867FCB00CEB199 /* MOCK_Tweets.json */; };
-		B08CBDF92688D4E000076305 /* MOCK_Users.json in Resources */ = {isa = PBXBuildFile; fileRef = B05B0FE32687820500CEB199 /* MOCK_Users.json */; };
 		B08CBE352688E66C00076305 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B08CBE372688E66C00076305 /* Localizable.strings */; };
 		B08CBE482688E69800076305 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B08CBE4A2688E69800076305 /* Localizable.strings */; };
 		B08CBE4F2688E74000076305 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08CBE4E2688E74000076305 /* String+Extensions.swift */; };
+		B0FF14AB2697266600B68A1C /* MOCK_Tweets.json in Resources */ = {isa = PBXBuildFile; fileRef = B0FF14A92697266400B68A1C /* MOCK_Tweets.json */; };
+		B0FF14AC2697266600B68A1C /* MOCK_Users.json in Resources */ = {isa = PBXBuildFile; fileRef = B0FF14AA2697266400B68A1C /* MOCK_Users.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,10 +82,8 @@
 		B05B0FAF26863BA500CEB199 /* Tweet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B05B0FB026863BA500CEB199 /* Tweet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tweet+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B05B0FB726863BDF00CEB199 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		B05B0FCB26867FCB00CEB199 /* MOCK_Tweets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MOCK_Tweets.json; path = ../../../../../Downloads/MOCK_Tweets.json; sourceTree = "<group>"; };
 		B05B0FD0268680B400CEB199 /* CodingUserInfoKey+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+Extensions.swift"; sourceTree = "<group>"; };
 		B05B0FD5268680B700CEB199 /* JSONDecoder+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extensions.swift"; sourceTree = "<group>"; };
-		B05B0FE32687820500CEB199 /* MOCK_Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = MOCK_Users.json; path = ../../../../../Downloads/MOCK_Users.json; sourceTree = "<group>"; };
 		B05B0FE82687829000CEB199 /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B05B0FE92687829000CEB199 /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		B05B0FFE268786D500CEB199 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -100,6 +96,8 @@
 		B08CBE362688E66C00076305 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B08CBE492688E69800076305 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B08CBE4E2688E74000076305 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B0FF14A92697266400B68A1C /* MOCK_Tweets.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MOCK_Tweets.json; sourceTree = "<group>"; };
+		B0FF14AA2697266400B68A1C /* MOCK_Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MOCK_Users.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,8 +206,8 @@
 		B05B0F7D2686300400CEB199 /* MockedData */ = {
 			isa = PBXGroup;
 			children = (
-				B05B0FCB26867FCB00CEB199 /* MOCK_Tweets.json */,
-				B05B0FE32687820500CEB199 /* MOCK_Users.json */,
+				B0FF14A92697266400B68A1C /* MOCK_Tweets.json */,
+				B0FF14AA2697266400B68A1C /* MOCK_Users.json */,
 			);
 			path = MockedData;
 			sourceTree = "<group>";
@@ -395,12 +393,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B05B0FCC26867FCB00CEB199 /* MOCK_Tweets.json in Resources */,
-				B05B0FE42687820600CEB199 /* MOCK_Users.json in Resources */,
 				B08CBE352688E66C00076305 /* Localizable.strings in Resources */,
 				B05B0F3326862DEC00CEB199 /* LaunchScreen.storyboard in Resources */,
 				B08CBE482688E69800076305 /* Localizable.strings in Resources */,
 				B05B0F3026862DEC00CEB199 /* Assets.xcassets in Resources */,
+				B0FF14AC2697266600B68A1C /* MOCK_Users.json in Resources */,
+				B0FF14AB2697266600B68A1C /* MOCK_Tweets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,8 +406,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B08CBDF92688D4E000076305 /* MOCK_Users.json in Resources */,
-				B08CBDF52688D4DD00076305 /* MOCK_Tweets.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
