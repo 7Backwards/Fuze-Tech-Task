@@ -4,7 +4,7 @@ This project consists in an app that retrieves tweets form a mock API and displa
 
 ## Disclaimer
 
-Publish since Fuze was acquired by 8x8 and this tech task is not longer relevant for hiring purposes.
+Public since Fuze was acquired by 8x8 and this tech task is not longer relevant for hiring purposes.
 
 ## Features
 
